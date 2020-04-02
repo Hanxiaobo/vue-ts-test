@@ -16,7 +16,20 @@ export default {
     }
   },
   mounted () {
-    console.log(this.person('hahahah'))
+    interface SquareConfig {
+        color: string;
+        area: number;
+    }
+
+    function createSquare(config: SquareConfig): { color: string; area: number } {
+      let newConfig = {color: 'red', area: 100}
+      newConfig.color = config.color
+      newConfig.area = config.area
+      return newConfig
+    }
+
+    let mySquare = createSquare({ color: "red", area: 100 });
+    console.log(mySquare)
   }
 }
 </script>
