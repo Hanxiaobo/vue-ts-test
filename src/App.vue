@@ -5,13 +5,16 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-
+import test from './test'
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted () {
+    console.log(test)
   }
 }
 </script>
